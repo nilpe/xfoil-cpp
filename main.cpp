@@ -10,12 +10,12 @@ int s_IterLim = 100;
 bool m_bErrors = false;
 bool s_bAutoInitBL = true;
 
-bool iterate(XFoil *foil) {
+bool iterate(XFoil* foil) {
   if (!foil->viscal()) {
     foil->lvconv = false;
     std::cout
-        << "CpCalc: local speed too large\nCompressibility corrections invalid"
-        << std::endl;
+      << "CpCalc: local speed too large\nCompressibility corrections invalid"
+      << std::endl;
     return false;
   }
 
@@ -30,7 +30,8 @@ bool iterate(XFoil *foil) {
       //  m_y1->append(foil->rmxbl);
       //}
       m_Iterations++;
-    } else
+    }
+    else
       m_Iterations = s_IterLim;
   }
 
@@ -55,7 +56,8 @@ bool iterate(XFoil *foil) {
     m_bErrors = true;
     foil->fcpmin();  // Is it of any use ?
     return false;
-  } else {
+  }
+  else {
     // converged at last
     foil->fcpmin();  // Is it of any use ?
     return true;
@@ -108,7 +110,7 @@ int main() {
   n = loadDatFile("sample/CLARK_Y.dat", x, y);
   if (n == -1) return 1;
 
-  XFoil *foil = new XFoil();
+  XFoil* foil = new XFoil();
 
   if (!foil->initXFoilGeometry(n, x, y, nx, ny)) {
     std::cout << "Initialization error!" << std::endl;
@@ -144,11 +146,12 @@ int main() {
 
     if (foil->lvconv) {
       std::cout << "  converged after " << m_Iterations << " iterations"
-                << std::endl;
+        << std::endl;
       std::cout << "  cl : " << foil->cl << ", cd : " << foil->cd
-                << ", cm : " << foil->cm << ", xcp : " << foil->xcp
-                << std::endl;
-    } else {
+        << ", cm : " << foil->cm << ", xcp : " << foil->xcp
+        << std::endl;
+    }
+    else {
       std::cout << "  unconverged" << std::endl;
     }
   }
