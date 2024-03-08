@@ -13,6 +13,6 @@ English:This is a library of xfoil-cpp extracted from XFLR5. The edits I made ar
 
     You should have received a copy of the GNU General Public License along with xfoil-cpp. If not, see <https://www.gnu.org/licenses/>. 
 
-    日本語:XFLR5から抽出されたxfoil-cppのライブラリです｡私が行った編集は軽微であり､また創作物ではないので著作権は発生しないと考えられますが､元となったXfoil-libがGPL3.0でライセンスされているため､このプログラム自体はGPL3.0でライセンスされます｡
-    使い方はmain.cppを見てください｡これは私の制作物ではなく､フォーク元となるkamino410氏のものです｡
-    機能追加:XFoil::interpolarateなどが追加されました｡適当に使ってください｡
+   日本語:XFLR5から抽出されたxfoil-cppのライブラリです｡私が行った編集は軽微であり､また創作物ではないので著作権は発生しないと考えられますが､元となったXfoil-libがGPL3.0でライセンスされているため､このプログラム自体はGPL3.0でライセンスされます｡
+   使い方はmain.cppを見てください｡これは私の制作物ではなく､フォーク元となるkamino410氏のものです｡
+   機能追加:XFoil::interpolarateなどが追加されました｡適当に使ってください｡
